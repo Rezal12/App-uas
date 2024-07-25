@@ -1,0 +1,37 @@
+#######################
+Website Manajemen Buku
+#######################
+
+Langkah-langkah
+
+1. cp environment .env
+2. composer update
+3. npm install && npm run dev
+
+4 (buka terminal baru)
+
+5. php artisan migrate
+6. php artisan serve
+
+lokasi website = localhost:8000 atau 127.0.0.1:8000
+
+#########################
+Fitur-Fitur
+
+Registrasi pengguna
+Autentikasi login
+
+protected routes/middleware (user yang belum login tidak dapat mengakses route yang dilindungi contoh: /dashboard )
+rest API untuk operasi CRUD (GET, POST, PATCH, DELETE) pada Buku, Kategori, dan Supplier pada endpoint /books-api /categories-api /suppliers-api
+
+Halaman dashboard (/dashboard) menampilkan overview data dari masing masing tabel Buku, Kategori dan Supplier. Pada halaman ini menampilkan total buku, total kategori, buku yang habis stok, total pemasok dan buku yang terakhir ditambahkan
+
+Halaman buku (/books) dapat melakukan operasi CRUD dapat Menambahkan/Mengubah/Membaca/Menghapus data dari tabel books
+NB : pada saat menambahkan buku, pada kolom kategori dan supplier mengambil list data dari tabel kategori dan supplier
+
+Halaman kategori (/categories) dapat melakukan operasi CRUD dapat Menambahkan/Mengubah/Membaca/Menghapus data dari tabel category
+
+Halaman pemasok (/suppliers) dapat melakukan operasi CRUD dapat Menambahkan/Mengubah/Membaca/Menghapus data dari tabel supplier 
+
+
+// dapat melakukan logout() //
